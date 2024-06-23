@@ -1,0 +1,69 @@
+// Exercise 1: Calculate the Sum of Two Numbers
+
+a + b = c
+
+num1 + num2 = sum
+print sum
+
+ask for 2 numbers 
+add the 2 number together 
+print on the screen the sum of those 2 numbers
+
+
+// Exercise 2: Check if a Number is Even or Odd
+
+    // Declare a variable to hold the number
+    DECLARE num
+
+    // Input the number
+    PRINT "Enter a number: "
+    INPUT num
+
+    // Check if the number is even or odd
+    IF num MOD 2 == 0 THEN
+        PRINT "The number is even."
+    ELSE
+        PRINT "The number is odd."
+    ENDIF
+
+// Exercise 3: 
+Write pseudo code that will perform the following.    
+
+a) Read in 5 separate numbers.   
+b) Calculate the average of the five numbers.
+c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
+d) Write out the results found from steps b and c with a message describing what they are
+
+    // Step a: Read in 5 separate numbers
+    DECLARE numbers AS LIST
+    FOR i FROM 1 TO 5 DO
+        PRINT "Enter number ", i, ": "
+        INPUT num
+        ADD num TO numbers
+    ENDFOR
+
+    // Step b: Calculate the average of the five numbers
+    DECLARE sum AS 0
+    FOR EACH num IN numbers DO
+        sum = sum + num
+    ENDFOR
+    DECLARE average AS sum / 5
+
+    // Step c: Find the smallest (minimum) and largest (maximum) of the five entered numbers
+    DECLARE minimum AS numbers[0]
+    DECLARE maximum AS numbers[0]
+    FOR EACH num IN numbers DO
+        IF num < minimum THEN
+            minimum = num
+        ENDIF
+        IF num > maximum THEN
+            maximum = num
+        ENDIF
+    ENDFOR
+
+    // Step d: Write out the results with a message describing what they are
+    PRINT "The average of the five numbers is: ", average
+    PRINT "The smallest (minimum) number is: ", minimum
+    PRINT "The largest (maximum) number is: ", maximum
+
+-- END --
